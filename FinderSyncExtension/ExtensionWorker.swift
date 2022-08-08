@@ -84,7 +84,12 @@ struct ExtensionWorker {
   }
 
   func copy() -> Bool {
-    let fileNames = ["terminal", "iterm", "hyper"]
+    let fileNames = [
+//                    "terminal",
+                    "iterm",
+//                    "hyper",
+                    "vscode"
+    ]
 
     for fileName in fileNames {
       guard let path = Bundle(for: FinderSync.self).url(forResource: fileName, withExtension: "scpt"),

@@ -54,8 +54,9 @@ class FinderSync: FIFinderSync, NSMenuDelegate {
     menu.delegate = self
 
     menu.addItem(withTitle: "iTerm", action: #selector(openiTerm(_:)), keyEquivalent: "")
-    menu.addItem(withTitle: "Terminal", action: #selector(openTerminal(_:)), keyEquivalent: "")
-    menu.addItem(withTitle: "Hyper", action: #selector(openHyper(_:)), keyEquivalent: "")
+    menu.addItem(withTitle: "vscode", action: #selector(openVScode(_:)), keyEquivalent: "")
+//    menu.addItem(withTitle: "Terminal", action: #selector(openTerminal(_:)), keyEquivalent: "")
+//    menu.addItem(withTitle: "Hyper", action: #selector(openHyper(_:)), keyEquivalent: "")
 
     return menu
   }
@@ -84,7 +85,9 @@ class FinderSync: FIFinderSync, NSMenuDelegate {
   @IBAction func openHyper(_ sender: AnyObject?) {
     run(fileName: "hyper")
   }
-
+    @IBAction func openVScode(_ sender: AnyObject?) {
+      run(fileName: "vscode")
+    }
   // MARK: - Script
 
   func run(fileName: String) {
